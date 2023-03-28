@@ -1,0 +1,25 @@
+<nav class="flex justify-between p-4 simple-linear">
+    <div>
+        <!-- <a routerLink="/">Books Shop</a> -->
+        <button routerLink="/">Books shop</button>
+    </div>
+    <div>
+        <!-- <a routerLink="/cart">Cart</a> -->
+        <button class="pl-4" routerLink="/cart">My Cart</button>
+        <ng-container *ngIf="!isAuthenticated()">
+
+        <button class="pl-4" routerLink="/login">Login</button>
+        <button class="pl-4" routerLink="/register">Register</button>
+
+        </ng-container>
+        <ng-container *ngIf="isAuthenticated()"> 
+            <button (click)="logout()" class="pl-4">Logout</button>
+
+        </ng-container>
+        
+    </div>
+</nav>
+<div class="p-4">
+    <router-outlet></router-outlet>
+</div>
+

@@ -1,0 +1,14 @@
+
+<!-- <button [disabled]="isDisabled" (click)="handleClick()">Show Books</button>
+<input type="text" [(ngModel)]="myName"/>
+<p>{{myName}}</p> -->
+<!-- <button (click)="isShowing=!isShowing">
+    <ng-container *ngIf="!isShowing">Show Books</ng-container>
+    <ng-container *ngIf="isShowing">Hide Books</ng-container>
+</button> -->
+<button class="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3" style="margin: 10px;" (click)="isShowing=!isShowing">Toggle</button><br>
+<ul *ngIf="isShowing">
+    <li class="Book-List" *ngFor="let bookInfo of books;let i=index">
+        <app-book [book]="bookInfo"></app-book>
+    </li>
+</ul>

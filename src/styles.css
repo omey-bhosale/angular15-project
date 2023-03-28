@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.simple-linear {
+    background: linear-gradient(rgba(89, 43, 154, 0.794), rgb(196, 158, 253));
+}
